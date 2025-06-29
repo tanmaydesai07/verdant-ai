@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdant AI - Analysis Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="flex h-screen bg-gray-50">
+
+    <!-- Sidebar (consistent with other pages) -->
+    <aside class="w-64 bg-white shadow-md flex-shrink-0 flex flex-col">
+        <div class="flex items-center justify-center h-20 border-b">
+             <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                <span class="text-2xl font-bold text-gray-800">Verdant AI</span>
+            </div>
+        </div>
+        <nav class="flex-grow px-4 py-6 space-y-2">
+            <a href="dashboard.html" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                Dashboard
+            </a>
+            <a href="results.html" class="flex items-center px-4 py-2 text-white bg-green-600 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Reports
+            </a>
+            <a href="#" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L8.6 3.9A2 2 0 0 0 6.9 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h16z"/></svg>
+                Projects
+            </a>
+        </nav>
+        <div class="px-4 py-6 border-t">
+             <a href="#" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.3 21.7c.4.4 1 .4 1.4 0l6.4-6.4c.4-.4.4-1 0-1.4l-1.4-1.4c-.4-.4-1-.4-1.4 0L14 14V3c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1v11l-1.3-1.3c-.4-.4-1-.4-1.4 0l-1.4 1.4c-.4.4-.4 1 0 1.4l6.4 6.4z"/></svg>
+                Help & Support
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+        <!-- Header -->
+        <header class="flex justify-between items-center p-6 bg-white border-b">
+            <div>
+                 <h1 class="text-2xl font-bold text-gray-800">Analysis Report</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <img class="w-10 h-10 rounded-full object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=A" alt="User avatar">
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6">
+            <div class="max-w-7xl mx-auto space-y-6">
+                <!-- Report Header -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex flex-wrap justify-between items-center">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-800">EcoDawn Inc.</h2>
+                            <p class="text-gray-500">Source: Corporate Website & Public Statements (scanned June 29, 2025)</p>
+                        </div>
+                        <div class="text-red-600 bg-red-100 px-4 py-2 rounded-lg font-semibold mt-4 sm:mt-0">
+                            Overall Risk: High
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Uploaded Image -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Uploaded Content</h3>
+                    <div id="uploaded-image-container" class="mt-4">
+                        <img id="uploaded-image" class="max-w-md h-auto rounded-lg border p-1 mx-auto" src="" alt="Uploaded Image">
+                    </div>
+                </div>
+
+                <!-- AI Generated Summary -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">✨ AI-Generated Summary</h3>
+                    <div id="ai-summary" class="p-4 bg-green-50 text-gray-700 rounded-md border border-green-200 min-h-[100px]">
+                        <div class="loader">Loading summary...</div>
+                    </div>
+                    <button id="regenerate-summary-btn" class="mt-4 text-sm text-green-600 hover:text-green-800 font-semibold">Regenerate Summary</button>
+                </div>
+                
+                <!-- Flagged Claims -->
+                <div class="bg-white rounded-lg shadow">
+                    <div class="p-6 border-b">
+                        <h3 class="text-xl font-semibold">Flagged Claims (3 Found)</h3>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <!-- Claim 1 -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-gray-800 font-medium">"Our packaging is eco-friendly and sustainable."</p>
+                                    <span class="text-xs font-semibold bg-red-100 text-red-800 px-2 py-1 rounded-full mt-2 inline-block">Vagueness</span>
+                                </div>
+                                <div class="flex space-x-2 flex-shrink-0 ml-4">
+                                    <button onclick="getExplanation(this)" data-claim-id="1" data-claim-text='Our packaging is eco-friendly and sustainable.' data-claim-type='Vagueness' class="text-sm text-blue-600 hover:underline">✨ Explain</button>
+                                    <button onclick="getRewrite(this)" data-claim-id="1" data-claim-text='Our packaging is eco-friendly and sustainable.' class="text-sm text-green-600 hover:underline">✨ Rewrite</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Claim 2 -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-gray-800 font-medium">"Made with 100% natural ingredients."</p>
+                                    <span class="text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full mt-2 inline-block">Hidden Trade-off</span>
+                                </div>
+                                <div class="flex space-x-2 flex-shrink-0 ml-4">
+                                     <button onclick="getExplanation(this)" data-claim-id="2" data-claim-text='Made with 100% natural ingredients.' data-claim-type='Hidden Trade-off' class="text-sm text-blue-600 hover:underline">✨ Explain</button>
+                                     <button onclick="getRewrite(this)" data-claim-id="2" data-claim-text='Made with 100% natural ingredients.' class="text-sm text-green-600 hover:underline">✨ Rewrite</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Claim 3 -->
+                         <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-gray-800 font-medium">"A portion of profits go to environmental causes."</p>
+                                    <span class="text-xs font-semibold bg-purple-100 text-purple-800 px-2 py-1 rounded-full mt-2 inline-block">No Proof</span>
+                                </div>
+                               <div class="flex space-x-2 flex-shrink-0 ml-4">
+                                     <button onclick="getExplanation(this)" data-claim-id="3" data-claim-text='A portion of profits go to environmental causes.' data-claim-type='No Proof' class="text-sm text-blue-600 hover:underline">✨ Explain</button>
+                                     <button onclick="getRewrite(this)" data-claim-id="3" data-claim-text='A portion of profits go to environmental causes.' class="text-sm text-green-600 hover:underline">✨ Rewrite</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Actions -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">✨ AI-Recommended Actions</h3>
+                    <div id="ai-actions" class="prose prose-sm max-w-none text-gray-700 min-h-[100px]">
+                        <div class="loader">Loading recommendations...</div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Gemini Responses -->
+    <div id="gemini-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div id="modal-content" class="bg-white rounded-lg shadow-2xl w-full max-w-2xl transform scale-95 opacity-0">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h4 id="modal-title" class="text-lg font-semibold">AI-Powered Insight</h4>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div id="modal-body" class="p-6">
+                <div class="loader">Generating response...</div>
+            </div>
+            <div class="p-4 bg-gray-50 border-t text-right">
+                <button onclick="closeModal()" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Mock Gemini API interaction ---
+        const apiKey = "AIzaSyD0MdaBeN77ldKJ7-zi_zFbLvWSb3e1HGA";
+
+        async function callGeminiAPI(prompt, elementToUpdate, isJson = false) {
+            if (elementToUpdate) {
+                 elementToUpdate.innerHTML = '<div class="loader">Calling Gemini... Please wait.</div>';
+            }
+            
+            try {
+                const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                     if (elementToUpdate) {
+                         elementToUpdate.innerHTML = text.replace(/\n/g, '<br>'); // Basic formatting
+                     }
+                    return text;
+                } else {
+                     if (elementToUpdate) {
+                         elementToUpdate.textContent = 'Sorry, the AI could not generate a response.';
+                     }
+                }
+            } catch (error) {
+                console.error("Gemini API call failed:", error);
+                if (elementToUpdate) {
+                    elementToUpdate.textContent = 'Error fetching response from AI. Please check the console.';
+                }
+            }
+        }
+
+        // --- Page Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const uploadedImage = localStorage.getItem('uploadedImage');
+            if (uploadedImage) {
+                document.getElementById('uploaded-image').src = uploadedImage;
+            } else {
+                document.getElementById('uploaded-image-container').style.display = 'none';
+            }
+            loadInitialData();
+            document.getElementById('regenerate-summary-btn').addEventListener('click', loadInitialData);
+        });
+
+        function loadInitialData() {
+            const uploadedImage = localStorage.getItem('uploadedImage');
+            // Generate summary
+            const summaryPrompt = `Based on the following image, generate a 2-3 sentence summary of the product and its claims. Image: ${uploadedImage}`;
+            callGeminiAPI(summaryPrompt, document.getElementById('ai-summary'));
+            
+            // Generate recommended actions
+            const actionsPrompt = `An analysis of "EcoDawn Inc." revealed high-risk greenwashing claims related to vagueness, hidden trade-offs, and lack of proof. Generate a bulleted list of 3-4 recommended actions for an investor to take. Use markdown for formatting.`;
+            callGeminiAPI(actionsPrompt, document.getElementById('ai-actions'));
+        }
+
+        // --- Modal Control ---
+        const modal = document.getElementById('gemini-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // --- Feature Functions ---
+        async function getExplanation(button) {
+            const claimText = button.dataset.claimText;
+            const claimType = button.dataset.claimType;
+            
+            document.getElementById('modal-title').textContent = `✨ Explanation for "${claimType}"`;
+            document.getElementById('modal-body').innerHTML = '<div class="loader">Generating explanation...</div>';
+            openModal();
+
+            const prompt = `Explain in simple terms why the claim "${claimText}" is a form of greenwashing classified as "${claimType}". Provide a brief definition of the greenwashing type and then apply it to the specific claim.`;
+            await callGeminiAPI(prompt, document.getElementById('modal-body'));
+        }
+        
+        async function getRewrite(button) {
+            const claimText = button.dataset.claimText;
+            
+            document.getElementById('modal-title').textContent = '✨ Suggested Rewrite';
+            document.getElementById('modal-body').innerHTML = '<div class="loader">Generating rewrite...</div>';
+            openModal();
+
+            const prompt = `The marketing claim "${claimText}" has been flagged for potential greenwashing. Rewrite this claim to be more transparent and credible. Provide 2-3 alternative phrasings. Structure the output clearly, for example, using bullet points.`;
+            await callGeminiAPI(prompt, document.getElementById('modal-body'));
+        }
+
+    </script>
+
+</body>
+</html>
